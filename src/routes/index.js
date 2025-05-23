@@ -1,4 +1,4 @@
-import Homeroute from "./HomeRoute";
+import Homeroute from "./Homeroute";
 import Loader from "./Loader";
 
 export {
