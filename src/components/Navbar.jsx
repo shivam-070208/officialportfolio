@@ -39,7 +39,7 @@ useEffect(() => {
     >
       <div
         ref={currentNavRef}
-        className="bg-green-600 h-10 w-10 rounded-full absolute z-[0] translate-y-[-50%] border-[#090B1B] border-2 transition-all duration-300"
+        className="bg-green-600 h-8 w-8 rounded-full absolute z-[0] translate-y-[-50%] border-[#090B1B] border-2 transition-all duration-300"
       />
       <Link
         to="/"
@@ -48,7 +48,7 @@ useEffect(() => {
         onClick={(e) => handleClick(e, "/")}
       >
         <i className="fas fa-home text-[1.2rem] text-blue-600"></i>
-        <p className="text-[0.7rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[2px]">
+        <p className="text-[0.5rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[2px]">
           Home
         </p>
       </Link>
@@ -61,7 +61,7 @@ useEffect(() => {
         onClick={(e) => handleClick(e, "/portfolio")}
       >
         <i className="fas fa-project-diagram text-[1.2rem] text-blue-600"></i>
-        <p className="text-[0.7rem] mt-[4px] text-[rgb(2, 9, 80)] font-extrabold absolute">
+        <p className="text-[0.5rem] mt-[4px] text-[rgb(2, 9, 80)] font-extrabold absolute">
           Portfolio
         </p>
       </Link>
@@ -74,7 +74,7 @@ useEffect(() => {
         onClick={(e) => handleClick(e, "/education")}
       >
         <i className="fas fa-graduation-cap text-[1.2rem] text-blue-600"></i>
-        <p className="text-[0.7rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute">
+        <p className="text-[0.5rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute">
           Education
         </p>
       </Link>
