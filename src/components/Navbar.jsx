@@ -48,7 +48,7 @@ useEffect(() => {
         onClick={(e) => handleClick(e, "/")}
       >
         <i className="fas fa-home text-[1.2rem] text-blue-600"></i>
-        <p className="text-[0.5rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[2px]">
+        <p className="text-[10px]  min-text-[0.8rem] min-text mt-[4px] text-[rgb(2, 9, 80)]  absolute translate-x-[2px]">
           Home
         </p>
       </Link>
@@ -61,7 +61,7 @@ useEffect(() => {
         onClick={(e) => handleClick(e, "/portfolio")}
       >
         <i className="fas fa-project-diagram text-[1.2rem] text-blue-600"></i>
-        <p className="text-[0.8vw] mt-[4px] text-[rgb(2, 9, 80)]  absolute">
+        <p className="text-[10px]  min-text-[0.8rem] mt-[4px] text-[rgb(2, 9, 80)]  absolute">
           Portfolio
         </p>
       </Link>
@@ -74,7 +74,7 @@ useEffect(() => {
         onClick={(e) => handleClick(e, "/education")}
       >
         <i className="fas fa-graduation-cap text-[1.2rem] text-blue-600"></i>
-        <p className="text-[0.5rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute">
+        <p className="text-[10px]  min-text-[0.8rem] mt-[4px] text-[rgb(2, 9, 80)]  absolute">
           Education
         </p>
       </Link>
@@ -85,7 +85,7 @@ useEffect(() => {
         onClick={(e) => handleClick(e, "/milestones")}
       >
         <i className="fas fa-certificate text-[1.2rem] text-blue-600"></i>
-        <p className="text-[0.5rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[-4px]">
+        <p className="text-[10px]  min-text-[0.8rem] mt-[4px] text-[rgb(2, 9, 80)]  absolute translate-x-[-4px]">
           Milestones
         </p>
       </Link>
@@ -96,7 +96,7 @@ useEffect(() => {
         onClick={(e) => handleClick(e, "/contact")}
       >
         <i className="fas fa-envelope text-blue-600 text-[1.2rem]"></i>
-        <p className="text-[0.5rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[-2px]">
+        <p className="text-[10px]  min-text-[0.8rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[-2px]">
           Contact
         </p>
       </Link>
