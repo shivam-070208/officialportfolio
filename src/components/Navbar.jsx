@@ -47,7 +47,7 @@ useEffect(() => {
         className={`z-1${location.pathname === "/" ? " checkedroute" : ""}`}
         onClick={(e) => handleClick(e, "/")}
       >
-        <i className="fas fa-home text-[1.6rem] text-blue-600"></i>
+        <i className="fas fa-home text-[1.2rem] text-blue-600"></i>
         <p className="text-[0.7rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[2px]">
           Home
         </p>
@@ -60,7 +60,7 @@ useEffect(() => {
         }`}
         onClick={(e) => handleClick(e, "/portfolio")}
       >
-        <i className="fas fa-project-diagram text-[1.6rem] text-blue-600"></i>
+        <i className="fas fa-project-diagram text-[1.2rem] text-blue-600"></i>
         <p className="text-[0.7rem] mt-[4px] text-[rgb(2, 9, 80)] font-extrabold absolute">
           Portfolio
         </p>
@@ -73,7 +73,7 @@ useEffect(() => {
         }`}
         onClick={(e) => handleClick(e, "/education")}
       >
-        <i className="fas fa-graduation-cap text-[1.6rem] text-blue-600"></i>
+        <i className="fas fa-graduation-cap text-[1.2rem] text-blue-600"></i>
         <p className="text-[0.7rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute">
           Education
         </p>
@@ -84,8 +84,8 @@ useEffect(() => {
         className={location.pathname === "/milestones" ? "checkedroute" : ""}
         onClick={(e) => handleClick(e, "/milestones")}
       >
-        <i className="fas fa-certificate text-[1.6rem] text-blue-600"></i>
-        <p className="text-[0.8rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[-4px]">
+        <i className="fas fa-certificate text-[1.2rem] text-blue-600"></i>
+        <p className="text-[0.5rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[-4px]">
           Milestones
         </p>
       </Link>
@@ -95,8 +95,8 @@ useEffect(() => {
         className={location.pathname === "/contact" ? "checkedroute" : ""}
         onClick={(e) => handleClick(e, "/contact")}
       >
-        <i className="fas fa-envelope text-blue-600 text-[1.6rem]"></i>
-        <p className="text-[0.8rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[-2px]">
+        <i className="fas fa-envelope text-blue-600 text-[1.2rem]"></i>
+        <p className="text-[0.5rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[-2px]">
           Contact
         </p>
       </Link>
