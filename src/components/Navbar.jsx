@@ -61,7 +61,7 @@ useEffect(() => {
         onClick={(e) => handleClick(e, "/portfolio")}
       >
         <i className="fas fa-project-diagram text-[1.2rem] text-blue-600"></i>
-        <p className="text-[0.5rem] mt-[4px] text-[rgb(2, 9, 80)] font-extrabold absolute">
+        <p className="text-[0.8vw] mt-[4px] text-[rgb(2, 9, 80)]  absolute">
           Portfolio
         </p>
       </Link>
