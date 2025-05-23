@@ -85,7 +85,7 @@ useEffect(() => {
         onClick={(e) => handleClick(e, "/milestones")}
       >
         <i className="fas fa-certificate text-blue-600"></i>
-        <p className="text-[0.7rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[-4px]">
+        <p className="text-[0.8rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[-4px]">
           Milestones
         </p>
       </Link>
@@ -96,7 +96,7 @@ useEffect(() => {
         onClick={(e) => handleClick(e, "/contact")}
       >
         <i className="fas fa-envelope text-blue-600"></i>
-        <p className="text-[0.7rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[-2px]">
+        <p className="text-[0.8rem] mt-[4px] text-[rgb(2, 9, 80)] font-bold absolute translate-x-[-2px]">
           Contact
         </p>
       </Link>
