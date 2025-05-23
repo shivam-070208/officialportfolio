@@ -8,7 +8,7 @@ const App = () => {
    useEffect(()=>{
     setTimeout(()=>{
       isLoading(false)
-    },4000)
+    },1000)
   },[])
   return (
     <div className='w-full h-full'>
