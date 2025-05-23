@@ -4,7 +4,7 @@ const Header = () => {
 return (
     <div className='w-screen flex p-4 justify-between'>
         <div className="text-white">
-            <i className="fa fa-briefcase mr-1" aria-hidden="true"></i>
+            <i className="fa fa-briefcase mr-1 text-xl" aria-hidden="true"></i>
             Shivam
         </div>
         <div className="links  text-white flex gap-2">
