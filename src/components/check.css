@@ -1,0 +1,39 @@
+
+
+.cube {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 60px;
+    margin-top: 0;
+   
+    
+}
+
+
+
+.cube .front {
+    transform: rotateY(0deg) translateZ(20px);
+}
+
+.cube .right {
+    transform: rotateY(90deg) translateZ(20px);
+}
+
+.cube .back {
+    transform: rotateY(180deg) translateZ(20px);
+}
+
+.cube .left {
+    transform: rotateY(-90deg) translateZ(20px);
+}
+
+@keyframes Cuberotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
