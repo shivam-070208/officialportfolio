@@ -18,14 +18,58 @@ body,html{
   height:100%;
   width:100vw;
   margin: 0;
+
   padding: 0;
   background-color: black;
-}
-.checkedroute{
-  transition: all 0.3s ease-in-out;
-  transform: translate(0%,-50%);
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar{
   display: none;
+}
+
+
+.heroicimage {
+  animation: borderwave 5s infinite ease-in-out alternate;
+  border-radius: 30%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 20px 14px rgba(119, 63, 231, 0.4); /* optional glow */
+}
+
+@keyframes borderwave {
+  0% {
+    border-top-right-radius: 30%;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    border-top-right-radius: 90%;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 70%;
+    border-bottom-left-radius: 2%;
+    transform: scale(1.02) rotate(1deg);
+  }
+  50% {
+    border-top-right-radius: 2%;
+    border-top-left-radius: 40%;
+    border-bottom-right-radius: 90%;
+    border-bottom-left-radius: 20%;
+    transform: scale(1.04) rotate(-1deg);
+  }
+  75% {
+    border-top-right-radius: 80%;
+    border-top-left-radius: 2%;
+    border-bottom-right-radius: 40%;
+    border-bottom-left-radius: 80%;
+    transform: scale(1.02) rotate(1deg);
+  }
+  100% {
+    border-top-right-radius: 30%;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 2%;
+    border-bottom-left-radius: 30%;
+    transform: scale(1) rotate(0deg);
+  }
 }

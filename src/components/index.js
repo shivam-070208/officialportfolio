@@ -1,9 +1,14 @@
 import Cube from "./Cube";
-import About from "./About";
-import Home from "./Home";
 import Navbar from "./Navbar";
-import Header from "./Header";
-
+import Home from "./Home";
+import About from "./About";
+import Skill from "./Skill";
+import Portfolio from "./Portfolio";
+import Contact from "./Contact";
 export {
-    Cube,Navbar,Home,About,Header
+    Cube,
+    Navbar,Home,About,
+    Skill,
+    Portfolio,
+    Contact
 }

@@ -1,28 +1,38 @@
-import React, { useEffect, useState } from 'react'
-import { Homeroute,Loader } from './routes'
-import { Route,Routes } from 'react-router'
-import { Navbar,Header } from './components'
+import React, {  useEffect, useState } from 'react'
+import { Loader } from './routes'
+import { Navbar,Home,About,Skill,Portfolio,Contact } from './components'
+
+
 
 const App = () => {
-  const [loading,isLoading]=useState(true)
-   useEffect(()=>{
-    setTimeout(()=>{
-      isLoading(false)
-    },1000)
-  },[])
+  const [loading, setLoading] = useState(() => !window.location.hash);
+
+
+   useEffect(() => {
+     if (loading) {
+       setTimeout(() => {
+         setLoading(false);
+       
+       }, 4000);
+     }
+   }, [loading])
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-fit overflow-hidden' >
       {
         loading?<Loader />: (
-        <div className='w-full h-full'>
-          <Header />
-          <Routes>
-            <Route path='/' element={<Homeroute />} />
-          </Routes>
-          <footer className=' fixed left-1/2 bottom-10 translate-x-[-50%] text-center '>
-            <Navbar setCurrentPage={0} />
-          </footer>
-        </div>)
+       <div className='w-screen h-full'>
+        <Navbar />
+      
+
+       <Home />
+       <About />
+       <Skill />
+       <Portfolio />
+       <Contact />
+        </div>
+     
+        )
+
       }
     </div>
   )
