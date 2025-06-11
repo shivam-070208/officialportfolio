@@ -8,8 +8,8 @@ const NAV_LINKS = [
   { label: 'Contact', href: '#contact', id: 'contact' },
 ];
 const SOCIAL_LINKS = [
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/yourprofile', icon: 'fab fa-linkedin' },
-  { label: 'GitHub', href: 'https://github.com/yourprofile', icon: 'fab fa-github' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/shivam-gupta-070208bts', icon: 'fab fa-linkedin' },
+  { label: 'GitHub', href: 'https://github.com/shivam-070208', icon: 'fab fa-github' },
   { label: 'Resume', href: '/src/assets/ShivamGuptaResume.pdf', icon: 'fas fa-file-alt', isResume: true },
 ];
 

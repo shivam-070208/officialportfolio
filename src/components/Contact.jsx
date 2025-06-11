@@ -21,7 +21,7 @@ return (
    window.location.href =href;
 
 }}  className="text-blue-400 hover:underline">
-  Send an Email
+  shivamdevofficial07@gmail.com
 </s>
 
         </p>
