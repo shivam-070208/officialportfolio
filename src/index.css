@@ -30,10 +30,10 @@ body,html{
 
 
 .heroicimage {
-  animation: borderwave 5s infinite ease-in-out alternate;
+  animation: borderwave 5s infinite alternate;
   border-radius: 30%;
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 20px 14px rgba(119, 63, 231, 0.4); /* optional glow */
+
+  box-shadow: 0 0 20px 14px rgba(119, 63, 231, 0.4); 
 }
 
 @keyframes borderwave {
