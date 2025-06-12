@@ -53,13 +53,19 @@ const Portfolio = () => {
       gsap.from(section, {
         scrollTrigger: {
           trigger: section,
+          
+          toggleActions:'play pause none reset'
+          
+          
     
         },
        
         y: 100,
+        x:30,
+        duration:4,
         opacity: 0,
-        duration: 1,
-        ease: 'power3.out',
+        stagger:1.0,
+        
       
       });
     });
@@ -67,7 +73,7 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="w-full min-h-[60vh] bg-black text-white px-2 py-16 flex flex-col items-center mb-20">
       <h2 className="text-2xl md:text-4xl font-extrabold text-blue-400 mb-10">My Projects</h2>
-      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="w-full card max-w-5xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, idx) => (
           <div key={idx} className="bg-[#10131a] card rounded-2xl shadow-lg border border-blue-900 flex flex-col overflow-hidden hover:scale-[1.03] transition-transform duration-200">
             <img src={project.image} alt={project.title} className="w-full h-40 object-cover" />
@@ -79,7 +85,7 @@ const Portfolio = () => {
                   <span key={i} className="bg-blue-900 text-blue-300 px-2 py-0.5 rounded text-xs font-semibold">{tech}</span>
                 ))}
               </div>
-              <div className="flex gap-4 mt-auto">
+              <div className="flex gap-4 card mt-auto">
                { project.link&&<a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline font-semibold">Live</a>}
                {project.github&& <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white font-semibold">GitHub</a>}
               </div>
