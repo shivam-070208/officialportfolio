@@ -12,17 +12,18 @@ const Contact = () => {
   };
 
 return (
-    <section id="contact" className="w-full min-h-[60vh] bg-black text-white px-2 py-16 flex flex-col items-center">
+    <section id="contact" className="w-full min-h-[60vh]  text-white px-2 py-16 flex flex-col items-center">
         <h2 className="text-2xl md:text-4xl font-extrabold text-blue-400 mb-8">Contact Me</h2>
         <p className="text-gray-300 mb-8 max-w-xl text-center">
             Have a project, question, or just want to say hi? Fill out the form below or email me directly at
-<s  onClick={()=>{
-  const  href="mailto:shivamdevofficial07@gmail.com?subject=Your%20Subject&body=Your%20Message"
-   window.location.href =href;
+<a  href="https://gmail.com/"
+  target='_blank' onClick={(e)=>{
+navigator.clipboard.writeText(e.target.innerText)
+  }}
 
-}}  className="text-blue-400 hover:underline">
+  className="text-blue-400 ml-1">
   shivamdevofficial07@gmail.com
-</s>
+</a>
 
         </p>
         <form

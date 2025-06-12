@@ -22,7 +22,7 @@ const App = () => {
         loading?<Loader />: (
        <div className='w-screen h-full'>
         <Navbar />
-      
+          
 
        <Home />
        <About />

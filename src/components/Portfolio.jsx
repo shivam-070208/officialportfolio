@@ -54,7 +54,7 @@ const Portfolio = () => {
         scrollTrigger: {
           trigger: section,
           
-          toggleActions:'play pause none reset'
+          toggleActions:'play pause play reset'
           
           
     
@@ -62,8 +62,9 @@ const Portfolio = () => {
        
         y: 100,
         x:30,
-        duration:4,
+        duration:1,
         opacity: 0,
+        filter:'hue-rotate(60deg)',
         stagger:1.0,
         
       
@@ -71,7 +72,7 @@ const Portfolio = () => {
     });
   }, [])
   return (
-    <section id="portfolio" className="w-full min-h-[60vh] bg-black text-white px-2 py-16 flex flex-col items-center mb-20">
+    <section id="portfolio" className="w-full min-h-[60vh]  text-white px-2 py-16 flex flex-col items-center mb-20">
       <h2 className="text-2xl md:text-4xl font-extrabold text-blue-400 mb-10">My Projects</h2>
       <div className="w-full card max-w-5xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, idx) => (

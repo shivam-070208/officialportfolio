@@ -21,9 +21,14 @@ const Home = () => {
       </div>
       {/* Right: Profile/Illustration */}
       <div className='flex-1 flex items-center justify-center  mt-10 md:mt-0'>
-        <div className='relative w-60 h-60 md:w-80 md:h-80  overflow-y-hidden shadow-2xl border-4 border-blue-400 bg-gradient-to-br from-blue-900 to-black flex items-center justify-center heroicimage'>
+        <div  className='relative w-60 h-60 md:w-80 md:h-80   overflow-hidden shadow-2xl border-4 border-blue-400 bg-gradient-to-br from-blue-900 to-black flex items-center justify-center heroicimage'>
           {/* Replace with your image or illustration */}
-          <span className='text-7xl md:text-[20vw] text-blue-400 font-extrabold'>👨‍💻</span>
+          <span onDrag={(e)=>{
+            e.preventDefault()
+         e.target.style.cursor='allowed'
+         console.log( e)
+          console.log(e.target.style)
+        }} draggable className='text-7xl md:text-[20vw]  text-blue-400 font-extrabold'>👨‍💻</span>
         </div>
       </div>
     </section>

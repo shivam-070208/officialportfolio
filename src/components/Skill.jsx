@@ -43,7 +43,7 @@ const Skill = () => {
   const activeSkills = skills.find(s => s.category === activeTab);
 
   return (
-    <section id="skill" className="w-full min-h-[60vh] bg-black text-white px-2 py-10 flex flex-col items-center">
+    <section id="skill" className="w-full min-h-[60vh]  text-white px-2 py-10 flex flex-col items-center">
       <h2 className="text-2xl md:text-4xl font-extrabold text-blue-400 mb-6">My Skillset</h2>
       <div className="flex gap-1 md:gap-4 mb-6 bg-[#10131a] rounded-full p-1 shadow-md">
         {skills.map(group => (
@@ -73,7 +73,7 @@ const Skill = () => {
       </div>
       {/* Marquee of picked skills */}
        <div className="w-full mt-16 overflow-hidden relativ flex gap-12">
-        <div className="whitespace-nowrap animate-marquee flex gap-12 text-xl md:text-2xl font-bold text-blue-300 py-4">
+        <div className="whitespace-nowrap min-w-[100vw] animate-marquee flex gap-12 justify-between md:text-2xl font-bold text-blue-300 py-4">
           <span className="flex items-center gap-4">
             <i className="fab fa-react text-blue-400"></i>React
           </span>
@@ -97,7 +97,7 @@ const Skill = () => {
             <i className="fab fa-css3-alt text-blue-300"></i>CSS3
           </span>
         </div>
-           <div className="whitespace-nowrap animate-marquee flex gap-12 text-xl md:text-2xl font-bold text-blue-300 py-4">
+           <div className="whitespace-nowrap min-w-[100vw] animate-marquee flex justify-between text-xl md:text-2xl font-bold text-blue-300 py-4">
           <span className="flex items-center gap-4">
             <i className="fab fa-react text-blue-400"></i>React
           </span>
@@ -124,9 +124,10 @@ const Skill = () => {
         <style>{`
           @keyframes marquee {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            100% { transform: translateX(-100%); }
           }
           .animate-marquee {
+          transition:all 2s;
             animation: marquee 18s linear infinite;
           }
         `}</style>

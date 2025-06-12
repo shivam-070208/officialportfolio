@@ -37,7 +37,7 @@ useEffect(() => {
   useEffect(() => {
     const handleObserve = (entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio > 0.2) {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
          
           setActive(entry.target.id);
         }
