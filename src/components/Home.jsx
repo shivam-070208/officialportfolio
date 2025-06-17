@@ -1,8 +1,10 @@
 import React from 'react'
-
+import { motion } from 'motion/react'
 const Home = () => {
   return (
-    <section id='home' className='w-screen h-screen flex flex-col md:flex-row items-center justify-center text-white px-33 mt-29 md:mt-3 lg:mt-0'>
+    <motion.section initial={{y:40,opacity:0,filter:'blur(3px)'}}
+    animate={{y:0, opacity:1,filter:'blur(0px)'}} transition={{duration:0.9}}
+    id='home' className='w-screen h-screen flex flex-col md:flex-row items-center justify-center text-white px-33 mt-29 md:mt-3 lg:mt-0'>
       {/* Left: Text Content */}
       <div className='flex-1 flex flex-col gap-6 max-w-xl '>
         <h1 className='text-4xl md:text-6xl font-extrabold text-blue-400 mb-2'>
@@ -31,7 +33,7 @@ const Home = () => {
         }} draggable className='text-7xl md:text-[20vw]  text-blue-400 font-extrabold'>👨‍💻</span>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

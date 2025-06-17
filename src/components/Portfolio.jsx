@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { motion } from 'motion/react'
 const projects = [
   {
     title: 'Papajohns',
@@ -56,37 +55,14 @@ const projects = [
 
 const Portfolio = () => {
    
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    document.querySelectorAll('section').forEach(section => {
-      gsap.from(section, {
-        scrollTrigger: {
-          trigger: section,
-          
-          toggleActions:'play pause play reset'
-          
-          
-    
-        },
-       
-        y: 100,
-        x:30,
-        duration:1,
-        opacity: 0,
-        filter:'hue-rotate(60deg)',
-        stagger:1.0,
-        
-      
-      });
-    });
-  }, [])
+ 
   return (
     <section id="portfolio" className="w-full min-h-[60vh]  text-white px-2 py-16 flex flex-col items-center mb-20">
       <h2 className="text-2xl md:text-4xl font-extrabold text-blue-400 mb-10">My Projects</h2>
       <div className="w-full card max-w-5xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, idx) => (
-          <div key={idx} className="bg-[#10131a] card rounded-2xl shadow-lg border border-blue-900 flex flex-col overflow-hidden hover:scale-[1.03] transition-transform duration-200">
-            <img src={project.image} alt={project.title} className="w-full h-40 object-cover" />
+          <motion.div initial={{y:10,opacity:0,filter:'blur(10px)'}} whileInView={{y:0,opacity:1,filter:'blur(0px)'}} transition={{duration:1,delay:idx%3 *0.1}} key={idx} className="bg-[#10131a] group rounded-2xl shadow-lg border border-blue-900 flex flex-col overflow-hidden hover:scale-[1.03] transition-transform duration-200">
+            <img src={project.image} alt={project.title} className="w-full h-40 group-hover:blur-xs object-cover" />
             <div className="p-5 flex flex-col flex-1">
               <h3 className="text-xl font-bold text-blue-300 mb-2">{project.title}</h3>
               <p className="text-gray-300 text-sm mb-3 flex-1">{project.description}</p>
@@ -100,7 +76,7 @@ const Portfolio = () => {
                {project.github&& <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white font-semibold">GitHub</a>}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

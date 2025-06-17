@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-
+import { motion } from 'motion/react';
 const Contact = () => {
   const formRef = useRef(null);
   const [submitted, setSubmitted] = useState(false);
@@ -12,7 +12,7 @@ setTimeout(() => setSubmitted(false), 4000);
   };
 
 return (
-    <section id="contact" className="w-full min-h-[60vh]  text-white px-2 py-16 flex flex-col items-center">
+    <motion.section id="contact" initial={{filter:'blur(6px)',y:10}} whileInView={{filter:'blur(0px)',y:0}} transition={{duration:0.8}} className="w-full min-h-[60vh]  text-white px-2 py-16 flex flex-col items-center">
         <h2 className="text-2xl md:text-4xl font-extrabold text-blue-400 mb-8">Contact Me</h2>
         <p className="text-gray-300 mb-8 max-w-xl text-center">
             Have a project, question, or just want to say hi? Fill out the form below or email me directly at
@@ -64,7 +64,7 @@ navigator.clipboard.writeText(e.target.innerText)
             <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-300 text-2xl hover:scale-110 transition-transform"><i className="fab fa-github"></i></a>
             <a href="/src/assets/ShivamGuptaResume.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-2xl hover:scale-110 transition-transform"><i className="fas fa-file-alt"></i></a>
         </div>
-    </section>
+    </motion.section>
 );
 };
 

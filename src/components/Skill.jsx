@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { motion } from 'motion/react';
 const skills = [
   {
     category: 'Frontend',
@@ -43,7 +43,7 @@ const Skill = () => {
   const activeSkills = skills.find(s => s.category === activeTab);
 
   return (
-    <section id="skill" className="w-full min-h-[60vh]  text-white px-2 py-10 flex flex-col items-center">
+    <motion.section initial={{filter:'blur(6px)',y:10}} whileInView={{filter:'blur(0px)',y:0}} transition={{duration:0.8}} id="skill" className="w-full min-h-[60vh]  text-white px-2 py-10 flex flex-col items-center">
       <h2 className="text-2xl md:text-4xl font-extrabold text-blue-400 mb-6">My Skillset</h2>
       <div className="flex gap-1 md:gap-4 mb-6 bg-[#10131a] rounded-full p-1 shadow-md">
         {skills.map(group => (
@@ -132,7 +132,7 @@ const Skill = () => {
           }
         `}</style>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

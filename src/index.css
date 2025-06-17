@@ -18,15 +18,30 @@ body,html{
   height:100%;
   width:100vw;
   margin: 0;
-
+  overflow-x: hidden;
   padding: 0;
   background-color: black;
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
-  display: none;
+body::-webkit-scrollbar{
+  background-color: black;
+  width: 10px;
 }
+
+body::-webkit-scrollbar-thumb{
+  background-color: green;
+  border-radius: 30px;
+  z-index: 1000;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: green;
+  border-radius: 30px;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+
 
 
 .heroicimage {

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-
+import { motion } from 'motion/react';
 const NAV_LINKS = [
-  { label: 'Home', href: '#', id: 'home' },
+  { label: 'Home', href: '#home', id: 'home' },
   { label: 'About', href: '#about', id: 'about' },
   { label: 'Skill', href: '#skill', id: 'skill' },
   { label: 'Portfolio', href: '#portfolio', id: 'portfolio' },
@@ -58,7 +58,7 @@ useEffect(() => {
   };
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 bg-black/80 backdrop-blur border-b border-gray-800">
+    <motion.nav className="w-full fixed top-0 left-0 z-50 bg-black/80 backdrop-blur border-b border-gray-800">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
         {/* Left: Name & Icon */}
         <div className="flex items-center gap-2 text-white text-lg font-bold">
@@ -153,7 +153,7 @@ useEffect(() => {
           animation: slideDown 0.3s cubic-bezier(0.4,0,0.2,1) forwards;
         }
       `}</style>
-    </nav>
+    </motion.nav>
   );
 };
 
