@@ -7,8 +7,8 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-   
-    setTimeout(() => setSubmitted(false), 4000);
+formRef.current.reset();
+setTimeout(() => setSubmitted(false), 4000);
   };
 
 return (

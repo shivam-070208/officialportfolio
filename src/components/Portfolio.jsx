@@ -3,6 +3,15 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const projects = [
   {
+    title: 'Papajohns',
+    description: 'A modern full stack food selling middleware website with a clean ui and  dashboard design.',
+    tech: ['React','Tailwindcss','gsap', 'Node.js', 'Express', 'MongoDB','Rest Api'],
+  
+    link: 'https://pizzasellingweb.vercel.app/',
+    github: 'https://github.com/shivam-070208/pizzasellingweb',
+    image: '/assets/projects/Papajohns.png',
+  },
+  {
     title: 'Meetingo',
     description: 'A modern meeting scheduling app that allows users to create, manage, and join meetings seamlessly.',
     tech: ['Ejs','Socket.io','Peerjs', 'Node.js', 'Express', 'MongoDB','Rest Api'],
