@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'motion/react';
+import { motion,useScroll } from 'motion/react';
 const NAV_LINKS = [
   { label: 'Home', href: '#home', id: 'home' },
   { label: 'About', href: '#about', id: 'about' },
@@ -10,10 +10,11 @@ const NAV_LINKS = [
 const SOCIAL_LINKS = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/shivam-gupta-070208bts', icon: 'fab fa-linkedin' },
   { label: 'GitHub', href: 'https://github.com/shivam-070208', icon: 'fab fa-github' },
-  { label: 'Resume', href: '/src/assets/ShivamGuptaResume.pdf', icon: 'fas fa-file-alt', isResume: true },
+  { label: 'Resume', href: '/ShivamGuptaResume.pdf', icon: 'fas fa-file-alt', isResume: true },
 ];
 
 const Navbar = () => {
+  const {scrollY} =useScroll()
   const [mobileOpen, setMobileOpen] = useState(false);
   const [active, setActive] = useState(window.location.hash.replace('#','')||'home'); // Default to 'home' if no path
   const observerRef = useRef(null);
@@ -34,7 +35,10 @@ useEffect(() => {
         }
     });
 }, [active, navref]);
-  useEffect(() => {
+useEffect(()=>{
+  console.log(scrollY)
+},[scrollY])  
+useEffect(() => {
     const handleObserve = (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting && entry.intersectionRatio > 0.4) {

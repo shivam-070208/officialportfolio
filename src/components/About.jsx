@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'motion/react'
 const About = () => {
   return (
-    <motion.section id="about" initial={{filter:'blur(6px)',y:10}} whileInView={{filter:'blur(0px)',y:0}} transition={{duration:0.9}} className="w-screen min-h-screen flex flex-col md:flex-row items-center justify-center  text-white  md:mt-0 mt-10 md:pr-30 px-6 md:px-0 py-16">
+    <motion.section id="about" initial={{filter:'blur(6px)',y:10}} whileInView={{filter:'blur(0px)',y:0}} transition={{duration:1}} className="w-screen min-h-screen flex flex-col md:flex-row items-center justify-center  text-white  md:mt-0 mt-10 md:pr-30 px-6 md:px-0 py-16">
       {/* Left: Image or Illustration */}
       <div className="flex-1 flex items-center justify-center mb-10 md:mb-0">
         <div className="w-56 h-56 md:w-72 md:h-72 rounded-2xl overflow-hidden shadow-xl border-4 border-blue-400 bg-gradient-to-br from-blue-900 to-black flex items-center justify-center">
